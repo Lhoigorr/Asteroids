@@ -1,6 +1,5 @@
 import pygame  # Importujemy pygame
 from constants import *  # Importujemy stałe
-
 def main():
     pygame.init()  # Inicjalizujemy pygame
 
@@ -19,19 +18,6 @@ def main():
 
         # Odświeżamy ekran
         pygame.display.flip()
-
-if __name__ == "__main__":
-    main()# this allows us to use code from
-# the open-source pygame library
-# throughout this file
-import pygame
-
-from constants import *
-
-def main():
-    print("Starting Asteroids!")
-    print(f"Screen width: {SCREEN_WIDTH}")
-    print(f"Screen height: {SCREEN_HEIGHT}")
 
 if __name__ == "__main__":
     main()
