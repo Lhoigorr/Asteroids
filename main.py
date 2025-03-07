@@ -5,6 +5,8 @@ def main():
 
     # Tworzymy okno gry o rozmiarze określonym w constants.py
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    clock = pygame.time.Clock()  # Obiekt do kontroli FPS
+    dt = 0  # Delta time
 
     # Pętla gry
     while True:
@@ -13,11 +15,10 @@ def main():
             if event.type == pygame.QUIT:
                 return  # Zamknięcie gry
 
-        # Wypełniamy ekran czarnym kolorem
-        screen.fill((0, 0, 0))
+       	screen.fill("black")  # Czyszczenie ekranu
+        pygame.display.flip()  # Aktualizacja ekranu
 
-        # Odświeżamy ekran
-        pygame.display.flip()
+        dt = clock.tick(60) / 1000  # Ograniczenie do 60 FPS + obliczenie delta time
 
 if __name__ == "__main__":
     main()
